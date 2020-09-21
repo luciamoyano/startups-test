@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import './App.css';
 import {NewProvider} from './contexts/NewContext';
 import Nav from './components/Nav'
-import Content from './components/Content';
+import List from './components/List';
 
 function App() {
   const [input, setInput] = useState('')
@@ -16,7 +16,7 @@ function App() {
   return (
     <NewProvider value={contextData}>
       <Nav />
-      <Content />
+      <List />
     </NewProvider>
   );
 }

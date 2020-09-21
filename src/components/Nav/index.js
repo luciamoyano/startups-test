@@ -1,11 +1,12 @@
 import React from 'react';
-import AutoComplete from '../AutoComplete';
+import Search from '../Search';
+import './style.scss';
 
 function Nav(){
     return (
         <nav>
-            <p>Startup Argentina</p>
-            <AutoComplete />
+            <img src="" alt="logo" />
+            <Search />
         </nav>
     )
 };

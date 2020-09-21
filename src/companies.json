@@ -1,0 +1,17 @@
+[
+    {
+        "name": "Pepe",
+        "description": "Compania1 descripcion",
+        "logo": "logourl"
+    },
+    {
+        "name": "Monica",
+        "description": "Compania2 descripcion",
+        "logo": "logourl"
+    },
+    {
+        "name": "Carlos",
+        "description": "Compania3 descripcion",
+        "logo": "logourl"
+    }
+]

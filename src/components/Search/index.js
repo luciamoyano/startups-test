@@ -1,7 +1,7 @@
 import React, {useContext} from 'react';
 import NewContext from '../../contexts/NewContext';
 
-function AutoComplete(){
+function Search(){
     const contextData = useContext(NewContext);
     const {handleInput} = contextData;
 
@@ -11,4 +11,4 @@ function AutoComplete(){
     return <input onChange={handleChange} type="text"></input>
 };
 
-export default AutoComplete;
+export default Search;
