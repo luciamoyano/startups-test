@@ -1,13 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
 import * as serviceWorker from './serviceWorker';
+import {BrowserRouter as Router, Route} from 'react-router-dom';
+import Agregar from './pages/AddStartup';
+import Home from './pages/Home';
+import AddStartup from './pages/AddStartup';
+import PruebaLocalStorage from './pages/PruebaLocalStorage';
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <Router>
+    <Route exact path="/" component={Home} />
+    <Route exact path="/agregar" component={AddStartup}/>
+    <Route exact path="/prueba-local-storage" component={PruebaLocalStorage}/>
+  </Router>,
   document.getElementById('root')
 );
 

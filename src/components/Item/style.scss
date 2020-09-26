@@ -1,8 +1,12 @@
 .item {
-    display: inline-block;
+    display: flex;
+    align-items: center;
     border: 1px solid #ccc;
     border-radius: 10px;
     background-color: #fff;
     padding:10px;
     margin-left: 20px;
+    img {
+        max-width: 150px;
+    }
 }

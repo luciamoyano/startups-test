@@ -6,8 +6,10 @@ function Item(props){
     return (
     <li className="item">    
         <img src={logo} />
-        <h2>{name}</h2>
-        <p>{description}</p>
+        <div className="item-info">
+            <h2>{name}</h2>
+            <p>{description}</p>
+        </div>
     </li>
     )
 }
