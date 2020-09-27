@@ -14,9 +14,15 @@ function List(){
 
     const startupList = startupsListStringed.map((item)=>{
         return JSON.parse(item)
-    })
+    });
+
+    console.log(startupList[0])
 
     return (
+        <>
+        {startupList.length > 0 &&
+        <div id="startups-list">
+        <h1>Startups List:</h1>
         <ul>
             {startupList.filter((company)=>{
                 return company.name.toLowerCase().includes(input.toLowerCase())
@@ -31,6 +37,9 @@ function List(){
                 return  <Item company={company} key={key}/>
             })} */}
         </ul>
+        </div>
+        }
+        </>
     )
 };
 

@@ -6,6 +6,10 @@ nav {
     display:flex;
     align-items: center;
     justify-content: center;
+    color:#fff;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 11px;
     img.main-logo {
         width:50px;
         position: absolute;
@@ -13,13 +17,19 @@ nav {
     }
     a.link-to-addstartup {
         display: block;
-        background-color: #fff;
+        position: absolute;
+        right:20px;
         border-radius: 5px;
-        padding:4px 6px;
-        font-size: 11px;
-        color: #333;
+        padding:4px 8px;
         text-decoration: none;
         border:none;
         margin-left:30px;
+        color:#fff;
+        &:hover,
+        &:focus,
+        &:active {
+            background-color: #99FFCE;
+            color: #000;
+        }
     }
 }

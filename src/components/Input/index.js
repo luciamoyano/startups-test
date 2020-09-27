@@ -1,4 +1,5 @@
 import React from 'react';
+import './style.scss';
 
 function Input(props){
     const {label, onChange, id} = props;
@@ -6,11 +7,12 @@ function Input(props){
     return (
         //solo mostrar label sin existe
         <>
-        {label && <p>{label}</p>}
+        {label && <label>{label}</label>}
         <input 
             type="text" 
             onChange={onChange}
             id={id}
+            className="addstartup-input"
         />
         </>
     )

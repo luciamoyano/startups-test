@@ -4,8 +4,8 @@ function TextArea(props){
     const {label, onChange, id} = props;
     return (
         <>
-            {label && <p>{label}</p>}
-            <textarea onChange={onChange} id={id}></textarea>
+            {label && <label>{label}</label>}
+            <textarea onChange={onChange} id={id} className="addstartup-input"></textarea>
         </>
     )
 };

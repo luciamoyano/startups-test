@@ -16,7 +16,7 @@ function Home() {
   return (
     <>
     <NewProvider value={contextData}>
-      <Nav showInput={true}/>
+      <Nav visible={true}/>
       <List />
     </NewProvider>
     </>

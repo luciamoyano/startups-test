@@ -1,7 +1,16 @@
-input {
+input.search-input {
     border:none;
     margin-left: 10px;
-    border-radius:5px;
-    background-color: #ccc;
+    background-color: transparent;
+    border-bottom: 1px solid #ccc;
+    color:#fff;
     height: 20px;
+    width: 80px;
+    font-size:12px;
+    &:focus,
+    &:hover,
+    &:active {
+        border-bottom: 1px solid #99FFCE;
+        outline: none;
+    }
 }

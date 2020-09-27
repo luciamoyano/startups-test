@@ -1,0 +1,21 @@
+button.send-button {
+    display: block;
+    margin:30px auto 10px auto;
+    border-radius: 5px;
+    padding:4px 8px;
+    text-decoration: none;
+    border:none;
+    color:#000;
+    text-transform:uppercase;
+    font-size: 12px;
+    font-weight: bold;
+    background-color: transparent;
+    letter-spacing: 0.05em;
+    cursor: pointer;
+    &:hover,
+    &:focus,
+    &:active {
+        background-color: #99FFCE;
+        outline: none;
+    }
+}
