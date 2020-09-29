@@ -3,20 +3,14 @@ import NewContext from '../../contexts/NewContext';
 import Item from '../Item';
 import companies from '../../companies.json';
 import './style.scss';
+import {useLocalStorage} from '../../hooks/localstorage';
 
 function List(){
     const contextData = useContext(NewContext);
     const {input} = contextData;
 
-    const dataStored = {...localStorage};
-    const startupsListStringed = Object.values(dataStored)
-
-
-    const startupList = startupsListStringed.map((item)=>{
-        return JSON.parse(item)
-    });
-
-    console.log(startupList[0])
+    const [getLocalStorage, setLocalStorage] = useLocalStorage();
+    const startupList = getLocalStorage();
 
     return (
         <>

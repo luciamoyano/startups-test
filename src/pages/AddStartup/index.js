@@ -9,14 +9,13 @@ import './style.scss';
 
 function AddStartup(){
     const [fields, setFields] = useState({});
-    const [startupsList, setStartupsList] = useState({});
     const [showErrors, setShowErrors] = useState(false);
 
     const requiredFields = ['name', 'logo', 'email'];
     // const errors es igual al resultado de la funcion de useValidate
     const errors = useValidate(fields, requiredFields);
     // el custom hook solo se puede usar en el componente, no dentro de una funcion
-    const allStartups = useLocalStorage();
+    const [getLocalStorage, setLocalStorage] = useLocalStorage();
 
 
     function handleInput(e) {
@@ -32,7 +31,7 @@ function AddStartup(){
         //chequeamos si el array de errores esta vacio o no
         if (errors.length == 0) {
             console.log('Sin errores');
-            setStartupsList(allStartups(fields));
+            setLocalStorage(fields);
         } else {
             console.log(`Tenes un error en ${errors}`)
         }

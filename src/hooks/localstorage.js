@@ -5,5 +5,15 @@ export const useLocalStorage = () => {
         const value = JSON.stringify(fields);
         localStorage.setItem(key, value);
     } 
-    return setLocalStorage;
+
+    const getLocalStorage = () => {
+        const dataStored = {...localStorage};
+        const startupsListStringed = Object.values(dataStored)
+        const startupList = startupsListStringed.map((item)=>{
+            return JSON.parse(item)
+        });
+        return startupList
+    };
+    
+    return [getLocalStorage, setLocalStorage];
 };
